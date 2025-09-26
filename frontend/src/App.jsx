@@ -17,7 +17,7 @@ const ProtectedRoute = ({ children }) => {
 
 const App = () => {
   return (
-    <div className="w-full h-full">
+    <div className="w-full h-full font-inter">
       <Routes>
         <Route path="/signup" element={<SignUp />} />
         <Route
