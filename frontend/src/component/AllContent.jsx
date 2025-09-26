@@ -3,28 +3,28 @@ import axios from "axios";
 
 // ------------------ API Constants ------------------
 const CRUD_UPDATE_API_URL =
-  "http://localhost:8000/api/KvKFpSm/crud-with-image-update";
-const CRUD_UPDATE_API_KEY = "o0ujSj8";
+  "http://localhost:8000/api/sjO1Kgc/crud-with-image-update";
+const CRUD_UPDATE_API_KEY = "XLKQq0J";
 const CRUD_UPDATE_TOKEN =
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGFlMTFmMjIyNWZmOTUwMjYyMjUzOGQiLCJhcGlLZXkiOiJvMHVqU2o4IiwiZmVhdHVyZSI6ImNydWQtd2l0aC1pbWFnZS11cGRhdGUiLCJpYXQiOjE3NTYzOTI5OTMsImV4cCI6MTc1ODk4NDk5M30.p1C1vVoCdZGl6L3fKmxyzYQQnuKTfvaMU4PA91UH3rw";
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGFlMTFmMjIyNWZmOTUwMjYyMjUzOGQiLCJhcGlLZXkiOiJYTEtRcTBKIiwiZmVhdHVyZSI6ImNydWQtd2l0aC1pbWFnZS11cGRhdGUiLCJpYXQiOjE3NTg4OTU5MzIsImV4cCI6MTc2MTQ4NzkzMn0.Gu5tcJq_ozz3OOwEMRgF89SvYE34NdKgzSLQx7bxSMU";
 
 const CRUD_DELETE_API_URL =
-  "http://localhost:8000/api/5zwHrwB/crud-with-image-delete";
-const CRUD_DELETE_API_KEY = "xaEUlCl";
+  "http://localhost:8000/api/7UFHU4V/crud-with-image-delete";
+const CRUD_DELETE_API_KEY = "dTqTCiX";
 const CRUD_DELETE_TOKEN =
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGFlMTFmMjIyNWZmOTUwMjYyMjUzOGQiLCJhcGlLZXkiOiJ4YUVVbENsIiwiZmVhdHVyZSI6ImNydWQtd2l0aC1pbWFnZS1kZWxldGUiLCJpYXQiOjE3NTYzOTM3NzYsImV4cCI6MTc1ODk4NTc3Nn0.6EH9eG2pHHTy-r3jCvg4O727wRwlfmoziE6rZ8nCy4s";
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGFlMTFmMjIyNWZmOTUwMjYyMjUzOGQiLCJhcGlLZXkiOiJkVHFUQ2lYIiwiZmVhdHVyZSI6ImNydWQtd2l0aC1pbWFnZS1kZWxldGUiLCJpYXQiOjE3NTg4OTU5NTksImV4cCI6MTc2MTQ4Nzk1OX0.1OqhOixqVvX0oVlADxzNx6HId0tFvqT3bzpeJI7EFgs";
 
 const CRUD_DELETE_MODEL_API_URL =
-  "http://localhost:8000/api/q85em18/crud-with-image-whole-modeldelete";
-const CRUD_DELETE_MODEL_API_KEY = "q85em18";
+  "http://localhost:8000/api/ag4BsCB/crud-with-image-whole-modeldelete";
+const CRUD_DELETE_MODEL_API_KEY = "zh6woxX";
 const CRUD_DELETE_MODEL_TOKEN =
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGFlMTFmMjIyNWZmOTUwMjYyMjUzOGQiLCJhcGlLZXkiOiJxODVlbTE4IiwiZmVhdHVyZSI6ImNydWQtd2l0aC1pbWFnZS13aG9sZS1tb2RlbGRlbGV0ZSIsImlhdCI6MTc1NjM5NDQxNSwiZXhwIjoxNzU4OTg2NDE1fQ.khlueySDRDiI_oVJjBFZ1eBaTwG9eZPjHfKqtGn8W1A";
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGFlMTFmMjIyNWZmOTUwMjYyMjUzOGQiLCJhcGlLZXkiOiJ6aDZ3b3hYIiwiZmVhdHVyZSI6ImNydWQtd2l0aC1pbWFnZS13aG9sZS1tb2RlbGRlbGV0ZSIsImlhdCI6MTc1ODg5NTk4MCwiZXhwIjoxNzYxNDg3OTgwfQ.LwK1OLdBuvChLWZz1vMwg40gPPQ-XZIgeO2m_B1bsnU";
 
 const FETCH_MODELS_API_URL =
-  "http://localhost:8000/api/Z83LrNg/crud-with-image-get-all-model-with-data";
-const FETCH_MODELS_API_KEY = "Z83LrNg";
+  "http://localhost:8000/api/6LkKsNn/crud-with-image-get-all-model-with-data";
+const FETCH_MODELS_API_KEY = "6LkKsNn";
 const FETCH_MODELS_TOKEN =
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGFlMTFmMjIyNWZmOTUwMjYyMjUzOGQiLCJhcGlLZXkiOiJaODNMck5nIiwiZmVhdHVyZSI6ImNydWQtd2l0aC1pbWFnZS1nZXQtYWxsLW1vZGVsLXdpdGgtZGF0YSIsImlhdCI6MTc1NjM5Mjk3MywiZXhwIjoxNzU4OTg0OTczfQ.YUrgZ-57hUiMoVm9Jrtsj8GKnpk48HaGmKLyrDCf3aE";
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGFlMTFmMjIyNWZmOTUwMjYyMjUzOGQiLCJhcGlLZXkiOiI2TGtLc05uIiwiZmVhdHVyZSI6ImNydWQtd2l0aC1pbWFnZS1nZXQtYWxsLW1vZGVsLXdpdGgtZGF0YSIsImlhdCI6MTc1ODg5NTk5NCwiZXhwIjoxNzYxNDg3OTk0fQ.Y4jEqKr6VqKCl6HDFwR80cJWE1ABQpWrFKqX-hJk5i8";
 
 // Pagination constant
 const ITEMS_PER_PAGE = 2;

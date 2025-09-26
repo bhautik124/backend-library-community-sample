@@ -9,7 +9,7 @@ const SignUp = () => {
   const handleSignupSuccess = async (credentialResponse) => {
     try {
       const res = await axios.post(
-        "http://localhost:8000/api/BEjcCpw/google-auth",
+        "http://localhost:8000/api/QN5tgkC/google-auth",
         { token: credentialResponse.credential },
         { withCredentials: true }
       );

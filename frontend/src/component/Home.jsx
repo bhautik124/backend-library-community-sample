@@ -9,7 +9,7 @@ const Home = () => {
   const handleLogout = async () => {
     try {
       const res = await axios.post(
-        "http://localhost:8000/api/e54WObx/google-auth-logout",
+        "http://localhost:8000/api/cl7E9YV/google-auth-logout",
         {},
         { withCredentials: true }
       );
