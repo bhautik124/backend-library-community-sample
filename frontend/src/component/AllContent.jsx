@@ -3,28 +3,28 @@ import axios from "axios";
 
 // ------------------ API Constants ------------------
 const CRUD_UPDATE_API_URL =
-  "http://localhost:8000/api/sjO1Kgc/crud-with-image-update";
-const CRUD_UPDATE_API_KEY = "XLKQq0J";
+  "https://backendlibraryy-fullstack-backend.onrender.com/api/MgpU82Y/crud-with-image-update";
+const CRUD_UPDATE_API_KEY = "hXVJ7Zq";
 const CRUD_UPDATE_TOKEN =
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGFlMTFmMjIyNWZmOTUwMjYyMjUzOGQiLCJhcGlLZXkiOiJYTEtRcTBKIiwiZmVhdHVyZSI6ImNydWQtd2l0aC1pbWFnZS11cGRhdGUiLCJpYXQiOjE3NTg4OTU5MzIsImV4cCI6MTc2MTQ4NzkzMn0.Gu5tcJq_ozz3OOwEMRgF89SvYE34NdKgzSLQx7bxSMU";
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGU1NzU5ZTM3OTgwYzM2M2FlMWQ4ZjIiLCJhcGlLZXkiOiJoWFZKN1pxIiwiZmVhdHVyZSI6ImNydWQtd2l0aC1pbWFnZS11cGRhdGUiLCJpYXQiOjE3NTk4Njg0ODgsImV4cCI6MTc2MjQ2MDQ4OH0.ipC98f9dAemlMvlnYueudTnNALeIqPj6zdsh0fYfz-g";
 
 const CRUD_DELETE_API_URL =
-  "http://localhost:8000/api/7UFHU4V/crud-with-image-delete";
-const CRUD_DELETE_API_KEY = "dTqTCiX";
+  "https://backendlibraryy-fullstack-backend.onrender.com/api/WToBZTV/crud-with-image-delete";
+const CRUD_DELETE_API_KEY = "sFI2MoC";
 const CRUD_DELETE_TOKEN =
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGFlMTFmMjIyNWZmOTUwMjYyMjUzOGQiLCJhcGlLZXkiOiJkVHFUQ2lYIiwiZmVhdHVyZSI6ImNydWQtd2l0aC1pbWFnZS1kZWxldGUiLCJpYXQiOjE3NTg4OTU5NTksImV4cCI6MTc2MTQ4Nzk1OX0.1OqhOixqVvX0oVlADxzNx6HId0tFvqT3bzpeJI7EFgs";
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGU1NzU5ZTM3OTgwYzM2M2FlMWQ4ZjIiLCJhcGlLZXkiOiJzRkkyTW9DIiwiZmVhdHVyZSI6ImNydWQtd2l0aC1pbWFnZS1kZWxldGUiLCJpYXQiOjE3NTk4Njg1MjYsImV4cCI6MTc2MjQ2MDUyNn0.6B6_-woYQfe0SbKKhpRte_4UUUEc5zJ_o-ZF3J7nnXU";
 
 const CRUD_DELETE_MODEL_API_URL =
-  "http://localhost:8000/api/ag4BsCB/crud-with-image-whole-modeldelete";
-const CRUD_DELETE_MODEL_API_KEY = "zh6woxX";
+  "https://backendlibraryy-fullstack-backend.onrender.com/api/Ghl5Vms/crud-with-image-whole-modeldelete";
+const CRUD_DELETE_MODEL_API_KEY = "SP3gowK";
 const CRUD_DELETE_MODEL_TOKEN =
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGFlMTFmMjIyNWZmOTUwMjYyMjUzOGQiLCJhcGlLZXkiOiJ6aDZ3b3hYIiwiZmVhdHVyZSI6ImNydWQtd2l0aC1pbWFnZS13aG9sZS1tb2RlbGRlbGV0ZSIsImlhdCI6MTc1ODg5NTk4MCwiZXhwIjoxNzYxNDg3OTgwfQ.LwK1OLdBuvChLWZz1vMwg40gPPQ-XZIgeO2m_B1bsnU";
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGU1NzU5ZTM3OTgwYzM2M2FlMWQ4ZjIiLCJhcGlLZXkiOiJTUDNnb3dLIiwiZmVhdHVyZSI6ImNydWQtd2l0aC1pbWFnZS13aG9sZS1tb2RlbGRlbGV0ZSIsImlhdCI6MTc1OTg2ODU2MSwiZXhwIjoxNzYyNDYwNTYxfQ.zQk9vQV7jtJziGcy9qXEBN9OOU2-J_sOmQ0INkGxS7Y";
 
 const FETCH_MODELS_API_URL =
-  "http://localhost:8000/api/6LkKsNn/crud-with-image-get-all-model-with-data";
-const FETCH_MODELS_API_KEY = "6LkKsNn";
+  "https://backendlibraryy-fullstack-backend.onrender.com/api/oqXvFP4/crud-with-image-get-all-model-with-data";
+const FETCH_MODELS_API_KEY = "oqXvFP4";
 const FETCH_MODELS_TOKEN =
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGFlMTFmMjIyNWZmOTUwMjYyMjUzOGQiLCJhcGlLZXkiOiI2TGtLc05uIiwiZmVhdHVyZSI6ImNydWQtd2l0aC1pbWFnZS1nZXQtYWxsLW1vZGVsLXdpdGgtZGF0YSIsImlhdCI6MTc1ODg5NTk5NCwiZXhwIjoxNzYxNDg3OTk0fQ.Y4jEqKr6VqKCl6HDFwR80cJWE1ABQpWrFKqX-hJk5i8";
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGU1NzU5ZTM3OTgwYzM2M2FlMWQ4ZjIiLCJhcGlLZXkiOiJvcVh2RlA0IiwiZmVhdHVyZSI6ImNydWQtd2l0aC1pbWFnZS1nZXQtYWxsLW1vZGVsLXdpdGgtZGF0YSIsImlhdCI6MTc1OTg2ODg1MywiZXhwIjoxNzYyNDYwODUzfQ.Gc-zBKxpXXeXAR0KRd98qgTIqbDVFeB1WQ25vphfXfQ";
 
 // Pagination constant
 const ITEMS_PER_PAGE = 3;
@@ -253,7 +253,8 @@ export default function WholeContent() {
           Featured Articles
         </h2>
         <p className="text-xl text-white/70 max-w-2xl mx-auto">
-          Discover our latest posts, insights, and stories from our amazing community
+          Discover our latest posts, insights, and stories from our amazing
+          community
         </p>
       </div>
 
@@ -262,8 +263,12 @@ export default function WholeContent() {
           <div className="w-20 h-20 bg-gradient-to-br from-purple-500/20 to-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
             <span className="text-3xl">📝</span>
           </div>
-          <h3 className="text-2xl font-bold text-white mb-4">No articles yet</h3>
-          <p className="text-white/70 mb-8">Be the first to share your story with the world!</p>
+          <h3 className="text-2xl font-bold text-white mb-4">
+            No articles yet
+          </h3>
+          <p className="text-white/70 mb-8">
+            Be the first to share your story with the world!
+          </p>
         </div>
       ) : (
         <div className="space-y-8">
@@ -284,7 +289,8 @@ export default function WholeContent() {
                       {model.modelName}
                     </h3>
                     <p className="text-white/60">
-                      {model.data.length} {model.data.length === 1 ? 'article' : 'articles'}
+                      {model.data.length}{" "}
+                      {model.data.length === 1 ? "article" : "articles"}
                     </p>
                   </div>
                   <button
@@ -301,7 +307,9 @@ export default function WholeContent() {
                     <div className="w-16 h-16 bg-gradient-to-br from-gray-500/20 to-gray-600/20 rounded-full flex items-center justify-center mx-auto mb-4">
                       <span className="text-2xl">📄</span>
                     </div>
-                    <p className="text-white/60 text-lg">No articles in this category yet</p>
+                    <p className="text-white/60 text-lg">
+                      No articles in this category yet
+                    </p>
                   </div>
                 ) : (
                   <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
@@ -339,13 +347,18 @@ export default function WholeContent() {
                                 k !== "createdAt" &&
                                 k !== "updatedAt" && (
                                   <div key={k}>
-                                    {k.toLowerCase().includes('title') || k.toLowerCase().includes('name') ? (
+                                    {k.toLowerCase().includes("title") ||
+                                    k.toLowerCase().includes("name") ? (
                                       <h4 className="text-xl font-bold text-white mb-2 group-hover:text-purple-300 transition-colors">
                                         {String(v) || "Untitled"}
                                       </h4>
-                                    ) : k.toLowerCase().includes('description') || k.toLowerCase().includes('content') ? (
+                                    ) : k
+                                        .toLowerCase()
+                                        .includes("description") ||
+                                      k.toLowerCase().includes("content") ? (
                                       <p className="text-white/80 leading-relaxed line-clamp-3">
-                                        {String(v) || "No description available"}
+                                        {String(v) ||
+                                          "No description available"}
                                       </p>
                                     ) : (
                                       <div className="flex flex-wrap gap-2">
@@ -368,7 +381,9 @@ export default function WholeContent() {
                               Edit
                             </button>
                             <button
-                              onClick={() => handleDeleteClick(model.modelName, doc._id)}
+                              onClick={() =>
+                                handleDeleteClick(model.modelName, doc._id)
+                              }
                               className="px-4 py-2.5 bg-red-500/10 hover:bg-red-500/20 text-red-400 border border-red-500/20 hover:border-red-500/30 rounded-full text-sm font-medium transition-all duration-300"
                             >
                               Delete
@@ -390,16 +405,21 @@ export default function WholeContent() {
                     >
                       ← Previous
                     </button>
-                    
+
                     <div className="flex items-center space-x-2">
                       {[...Array(totalPages)].map((_, i) => (
                         <button
                           key={i}
-                          onClick={() => setPagination(prev => ({ ...prev, [model.modelName]: i + 1 }))}
+                          onClick={() =>
+                            setPagination((prev) => ({
+                              ...prev,
+                              [model.modelName]: i + 1,
+                            }))
+                          }
                           className={`w-10 h-10 rounded-full font-medium transition-all duration-300 ${
                             currentPage === i + 1
-                              ? 'bg-gradient-to-r from-purple-500 to-blue-600 text-white shadow-glow'
-                              : 'bg-white/5 hover:bg-white/10 text-white/70 hover:text-white border border-white/10'
+                              ? "bg-gradient-to-r from-purple-500 to-blue-600 text-white shadow-glow"
+                              : "bg-white/5 hover:bg-white/10 text-white/70 hover:text-white border border-white/10"
                           }`}
                         >
                           {i + 1}
@@ -427,9 +447,7 @@ export default function WholeContent() {
         <div className="fixed inset-0 bg-black/70 backdrop-blur-md flex items-center justify-center z-50 p-4">
           <div className="glass-card p-8 rounded-2xl shadow-2xl w-full max-w-lg border border-white/20 animate-in">
             <div className="flex items-center justify-between mb-6">
-              <h3 className="text-2xl font-bold text-gradient">
-                Edit Article
-              </h3>
+              <h3 className="text-2xl font-bold text-gradient">Edit Article</h3>
               <button
                 onClick={() => setSelectedDoc(null)}
                 className="w-8 h-8 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center text-white/60 hover:text-white transition-all"
@@ -451,7 +469,8 @@ export default function WholeContent() {
                       <label className="block text-sm font-medium text-white/80 capitalize mb-2">
                         {k}
                       </label>
-                      {k.toLowerCase().includes('description') || k.toLowerCase().includes('content') ? (
+                      {k.toLowerCase().includes("description") ||
+                      k.toLowerCase().includes("content") ? (
                         <textarea
                           name={k}
                           value={v || ""}
@@ -519,7 +538,11 @@ export default function WholeContent() {
                 Delete Article?
               </h3>
               <p className="text-white/70 mb-8">
-                Are you sure you want to delete this article from <span className="text-purple-300 font-semibold">{selectedDeleteDoc.modelName}</span>? This action cannot be undone.
+                Are you sure you want to delete this article from{" "}
+                <span className="text-purple-300 font-semibold">
+                  {selectedDeleteDoc.modelName}
+                </span>
+                ? This action cannot be undone.
               </p>
               <div className="flex gap-3">
                 <button
@@ -552,7 +575,12 @@ export default function WholeContent() {
                 Delete Category?
               </h3>
               <p className="text-white/70 mb-8">
-                Are you sure you want to delete the <span className="text-purple-300 font-semibold">{selectedModel}</span> category? All articles in this category will be permanently deleted.
+                Are you sure you want to delete the{" "}
+                <span className="text-purple-300 font-semibold">
+                  {selectedModel}
+                </span>{" "}
+                category? All articles in this category will be permanently
+                deleted.
               </p>
               <div className="flex gap-3">
                 <button

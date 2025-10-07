@@ -4,16 +4,16 @@ import { useNavigate } from "react-router-dom"; // Import useNavigate for redire
 
 // API Constants
 const CRUD_API_URL =
-  "http://localhost:8000/api/Gpd1HMi/crud-with-image-create-model";
-const CRUD_API_KEY = "rAxgpzk";
+  "https://backendlibraryy-fullstack-backend.onrender.com/api/uPXzzoa/crud-with-image-create-model";
+const CRUD_API_KEY = "CsqrF91";
 const CRUD_TOKEN =
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGFlMTFmMjIyNWZmOTUwMjYyMjUzOGQiLCJhcGlLZXkiOiJyQXhncHprIiwiZmVhdHVyZSI6ImNydWQtd2l0aC1pbWFnZS1jcmVhdGUtbW9kZWwiLCJpYXQiOjE3NTg5MDAxNzcsImV4cCI6MTc2MTQ5MjE3N30.t4-IfSe6_ee8OGpwpTwZnJfBwwkVaMl4CHcjUVqmhgs";
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGU1NzU5ZTM3OTgwYzM2M2FlMWQ4ZjIiLCJhcGlLZXkiOiJDc3FyRjkxIiwiZmVhdHVyZSI6ImNydWQtd2l0aC1pbWFnZS1jcmVhdGUtbW9kZWwiLCJpYXQiOjE3NTk4Njg0NTUsImV4cCI6MTc2MjQ2MDQ1NX0.rEYr3QfbX71ECb1kH8J7PbzUMjyNLdwVYS4ZAZS_YH4";
 
 const FETCH_MODELS_API_URL =
-  "http://localhost:8000/api/6LkKsNn/crud-with-image-get-all-model-with-data";
-const FETCH_MODELS_API_KEY = "6LkKsNn";
+  "https://backendlibraryy-fullstack-backend.onrender.com/api/oqXvFP4/crud-with-image-get-all-model-with-data";
+const FETCH_MODELS_API_KEY = "oqXvFP4";
 const FETCH_MODELS_TOKEN =
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGFlMTFmMjIyNWZmOTUwMjYyMjUzOGQiLCJhcGlLZXkiOiI2TGtLc05uIiwiZmVhdHVyZSI6ImNydWQtd2l0aC1pbWFnZS1nZXQtYWxsLW1vZGVsLXdpdGgtZGF0YSIsImlhdCI6MTc1ODg5NTk5NCwiZXhwIjoxNzYxNDg3OTk0fQ.Y4jEqKr6VqKCl6HDFwR80cJWE1ABQpWrFKqX-hJk5i8";
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGU1NzU5ZTM3OTgwYzM2M2FlMWQ4ZjIiLCJhcGlLZXkiOiJvcVh2RlA0IiwiZmVhdHVyZSI6ImNydWQtd2l0aC1pbWFnZS1nZXQtYWxsLW1vZGVsLXdpdGgtZGF0YSIsImlhdCI6MTc1OTg2ODg1MywiZXhwIjoxNzYyNDYwODUzfQ.Gc-zBKxpXXeXAR0KRd98qgTIqbDVFeB1WQ25vphfXfQ";
 
 const AddDataForm = () => {
   // ------------------ STATES ------------------
@@ -211,7 +211,9 @@ const AddDataForm = () => {
                 <span className="text-green-400 text-xl">✅</span>
                 <div>
                   <p className="font-semibold">Success</p>
-                  <p className="text-green-400/80">Article created successfully!</p>
+                  <p className="text-green-400/80">
+                    Article created successfully!
+                  </p>
                 </div>
               </div>
             </div>
@@ -233,7 +235,12 @@ const AddDataForm = () => {
                     setSelectedModel(model || null);
                     setShowFields(false);
                     setDataEntries([
-                      { id: Date.now(), fields: {}, image: null, isOpen: false },
+                      {
+                        id: Date.now(),
+                        fields: {},
+                        image: null,
+                        isOpen: false,
+                      },
                     ]);
                   }}
                   className="w-full px-6 py-4 bg-white/5 border border-white/10 rounded-xl text-white text-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-all duration-300"
@@ -271,9 +278,14 @@ const AddDataForm = () => {
                 </h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                   {selectedModel.fields.slice(0, -2).map((field) => (
-                    <div key={field._id} className="flex items-center space-x-3 text-white/80">
+                    <div
+                      key={field._id}
+                      className="flex items-center space-x-3 text-white/80"
+                    >
                       <span className="w-2 h-2 bg-purple-400 rounded-full"></span>
-                      <span className="font-medium capitalize">{field.name}</span>
+                      <span className="font-medium capitalize">
+                        {field.name}
+                      </span>
                       <span className="text-white/60">({field.type})</span>
                     </div>
                   ))}
@@ -285,13 +297,14 @@ const AddDataForm = () => {
           {/* Article Entries */}
           {selectedModel && (
             <div className="space-y-6">
-              <h3 className="text-2xl font-bold text-white">
-                Create Articles
-              </h3>
-              
+              <h3 className="text-2xl font-bold text-white">Create Articles</h3>
+
               <div className="space-y-4">
                 {dataEntries.map((entry, index) => (
-                  <div key={entry.id} className="blog-card rounded-xl overflow-hidden">
+                  <div
+                    key={entry.id}
+                    className="blog-card rounded-xl overflow-hidden"
+                  >
                     <button
                       type="button"
                       onClick={() => toggleEntry(entry.id)}
@@ -305,23 +318,28 @@ const AddDataForm = () => {
                           {getEntryLabel(entry, index + 1)}
                         </span>
                       </div>
-                      <span className="text-white text-xl">{entry.isOpen ? "−" : "+"}</span>
+                      <span className="text-white text-xl">
+                        {entry.isOpen ? "−" : "+"}
+                      </span>
                     </button>
-                    
+
                     {entry.isOpen && (
                       <div className="p-6 space-y-5">
                         {selectedModel.fields
                           .filter(
                             (field) =>
-                              field.name !== "imgUrl" && field.name !== "publicId"
+                              field.name !== "imgUrl" &&
+                              field.name !== "publicId"
                           )
                           .map((field) => (
                             <div key={field._id}>
                               <label className="block text-sm font-semibold text-white/80 capitalize mb-2">
                                 {field.name}
                               </label>
-                              {field.name.toLowerCase().includes('description') || 
-                               field.name.toLowerCase().includes('content') ? (
+                              {field.name
+                                .toLowerCase()
+                                .includes("description") ||
+                              field.name.toLowerCase().includes("content") ? (
                                 <textarea
                                   value={entry.fields[field.name] || ""}
                                   onChange={(e) =>
@@ -337,7 +355,9 @@ const AddDataForm = () => {
                                 />
                               ) : (
                                 <input
-                                  type={field.type === "Number" ? "number" : "text"}
+                                  type={
+                                    field.type === "Number" ? "number" : "text"
+                                  }
                                   value={entry.fields[field.name] || ""}
                                   onChange={(e) =>
                                     handleDataFieldInput(
@@ -352,7 +372,7 @@ const AddDataForm = () => {
                               )}
                             </div>
                           ))}
-                        
+
                         <div>
                           <label className="block text-sm font-semibold text-white/80 mb-2">
                             Cover Image (Optional)
@@ -364,7 +384,7 @@ const AddDataForm = () => {
                             className="w-full text-sm text-white/70 file:mr-4 file:py-3 file:px-6 file:rounded-xl file:border-0 file:bg-gradient-to-r file:from-purple-500/20 file:to-blue-500/20 file:text-white file:font-semibold hover:file:from-purple-500/30 hover:file:to-blue-500/30 transition-all cursor-pointer border border-white/10 rounded-xl p-2"
                           />
                         </div>
-                        
+
                         {dataEntries.length > 1 && (
                           <div className="pt-4 border-t border-white/10">
                             <button
@@ -380,7 +400,7 @@ const AddDataForm = () => {
                     )}
                   </div>
                 ))}
-                
+
                 <button
                   type="button"
                   onClick={addDataEntry}

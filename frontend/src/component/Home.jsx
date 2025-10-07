@@ -9,7 +9,7 @@ const Home = () => {
   const handleLogout = async () => {
     try {
       const res = await axios.post(
-        "http://localhost:8000/api/PyIxcj9/google-auth-logout",
+        "https://backendlibraryy-fullstack-backend.onrender.com/api/ejrsXbV/google-auth-logout",
         {},
         { withCredentials: true }
       );

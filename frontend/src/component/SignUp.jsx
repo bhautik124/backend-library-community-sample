@@ -9,7 +9,7 @@ const SignUp = () => {
   const handleSignupSuccess = async (credentialResponse) => {
     try {
       const res = await axios.post(
-        "http://localhost:8000/api/YXqivLD/google-auth",
+        "https://backendlibraryy-fullstack-backend.onrender.com/api/jDyGyZp/google-auth",
         { token: credentialResponse.credential },
         { withCredentials: true }
       );
