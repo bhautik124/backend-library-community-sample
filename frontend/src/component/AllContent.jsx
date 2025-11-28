@@ -3,28 +3,28 @@ import axios from "axios";
 
 // ------------------ API Constants ------------------
 const CRUD_UPDATE_API_URL =
-  "https://backendlibraryy-fullstack-backend.onrender.com/api/MgpU82Y/crud-with-image-update";
-const CRUD_UPDATE_API_KEY = "hXVJ7Zq";
+  "https://backendlibraryy-fullstack-backend.onrender.com/api/qhlmRzO/crud-with-image-update";
+const CRUD_UPDATE_API_KEY = "Ym4cRef";
 const CRUD_UPDATE_TOKEN =
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGU1NzU5ZTM3OTgwYzM2M2FlMWQ4ZjIiLCJhcGlLZXkiOiJoWFZKN1pxIiwiZmVhdHVyZSI6ImNydWQtd2l0aC1pbWFnZS11cGRhdGUiLCJpYXQiOjE3NTk4Njg0ODgsImV4cCI6MTc2MjQ2MDQ4OH0.ipC98f9dAemlMvlnYueudTnNALeIqPj6zdsh0fYfz-g";
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OTI5YzVlOWJhNDExMGRjMzljZjgzZWYiLCJhcGlLZXkiOiJZbTRjUmVmIiwiZmVhdHVyZSI6ImNydWQtd2l0aC1pbWFnZS11cGRhdGUiLCJpYXQiOjE3NjQzNDY2NTAsImV4cCI6MTc2NjkzODY1MH0.Q2f0-fArIWLbFs7rzHswxBSpO7b6MIhhPoHGCHn8ZLI";
 
 const CRUD_DELETE_API_URL =
-  "https://backendlibraryy-fullstack-backend.onrender.com/api/WToBZTV/crud-with-image-delete";
-const CRUD_DELETE_API_KEY = "sFI2MoC";
+  "https://backendlibraryy-fullstack-backend.onrender.com/api/afZjtY7/crud-with-image-delete";
+const CRUD_DELETE_API_KEY = "ncBOzC4";
 const CRUD_DELETE_TOKEN =
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGU1NzU5ZTM3OTgwYzM2M2FlMWQ4ZjIiLCJhcGlLZXkiOiJzRkkyTW9DIiwiZmVhdHVyZSI6ImNydWQtd2l0aC1pbWFnZS1kZWxldGUiLCJpYXQiOjE3NTk4Njg1MjYsImV4cCI6MTc2MjQ2MDUyNn0.6B6_-woYQfe0SbKKhpRte_4UUUEc5zJ_o-ZF3J7nnXU";
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OTI5YzVlOWJhNDExMGRjMzljZjgzZWYiLCJhcGlLZXkiOiJuY0JPekM0IiwiZmVhdHVyZSI6ImNydWQtd2l0aC1pbWFnZS1kZWxldGUiLCJpYXQiOjE3NjQzNDY2ODcsImV4cCI6MTc2NjkzODY4N30.YX1AENAi89RDd2wfv1y5Ju6NUyHI45ZQKBbDgnxjMN4";
 
 const CRUD_DELETE_MODEL_API_URL =
-  "https://backendlibraryy-fullstack-backend.onrender.com/api/Ghl5Vms/crud-with-image-whole-modeldelete";
-const CRUD_DELETE_MODEL_API_KEY = "SP3gowK";
+  "https://backendlibraryy-fullstack-backend.onrender.com/api/CRmxSP8/crud-with-image-whole-modeldelete";
+const CRUD_DELETE_MODEL_API_KEY = "Or8Ariw";
 const CRUD_DELETE_MODEL_TOKEN =
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGU1NzU5ZTM3OTgwYzM2M2FlMWQ4ZjIiLCJhcGlLZXkiOiJTUDNnb3dLIiwiZmVhdHVyZSI6ImNydWQtd2l0aC1pbWFnZS13aG9sZS1tb2RlbGRlbGV0ZSIsImlhdCI6MTc1OTg2ODU2MSwiZXhwIjoxNzYyNDYwNTYxfQ.zQk9vQV7jtJziGcy9qXEBN9OOU2-J_sOmQ0INkGxS7Y";
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OTI5YzVlOWJhNDExMGRjMzljZjgzZWYiLCJhcGlLZXkiOiJPcjhBcml3IiwiZmVhdHVyZSI6ImNydWQtd2l0aC1pbWFnZS13aG9sZS1tb2RlbGRlbGV0ZSIsImlhdCI6MTc2NDM0NjcyOSwiZXhwIjoxNzY2OTM4NzI5fQ.y65igZl5aC0JkXMHI0WyE7SluSBV_FqY4VntyNI5tm8";
 
 const FETCH_MODELS_API_URL =
-  "https://backendlibraryy-fullstack-backend.onrender.com/api/oqXvFP4/crud-with-image-get-all-model-with-data";
-const FETCH_MODELS_API_KEY = "oqXvFP4";
+  "https://backendlibraryy-fullstack-backend.onrender.com/api/WIOtbnx/crud-with-image-get-all-model-with-data";
+const FETCH_MODELS_API_KEY = "WIOtbnx";
 const FETCH_MODELS_TOKEN =
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGU1NzU5ZTM3OTgwYzM2M2FlMWQ4ZjIiLCJhcGlLZXkiOiJvcVh2RlA0IiwiZmVhdHVyZSI6ImNydWQtd2l0aC1pbWFnZS1nZXQtYWxsLW1vZGVsLXdpdGgtZGF0YSIsImlhdCI6MTc1OTg2ODg1MywiZXhwIjoxNzYyNDYwODUzfQ.Gc-zBKxpXXeXAR0KRd98qgTIqbDVFeB1WQ25vphfXfQ";
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OTI5YzVlOWJhNDExMGRjMzljZjgzZWYiLCJhcGlLZXkiOiJXSU90Ym54IiwiZmVhdHVyZSI6ImNydWQtd2l0aC1pbWFnZS1nZXQtYWxsLW1vZGVsLXdpdGgtZGF0YSIsImlhdCI6MTc2NDM0NjAzMSwiZXhwIjoxNzY2OTM4MDMxfQ.vVX1Zq0RrEQGxLxoHFLjQg7DDdqq1NxIBcsurqjOQlc";
 
 // Pagination constant
 const ITEMS_PER_PAGE = 3;
@@ -362,7 +362,7 @@ export default function WholeContent() {
                                       </p>
                                     ) : (
                                       <div className="flex flex-wrap gap-2">
-                                        <span className="text-xs font-medium text-purple-300 bg-purple-500/10 px-2 py-1 rounded-full border border-purple-500/20">
+                                        <span className="text-xs font-medium text-purple-300 px-2 py-1 rounded-full">
                                           {k}: {String(v) || "-"}
                                         </span>
                                       </div>
